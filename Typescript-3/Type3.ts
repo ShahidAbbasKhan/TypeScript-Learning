@@ -45,5 +45,45 @@ console.log(newUser);
  }
 
 
- //interface
+ //interface ..(reopen interface and get more addition in it)
+ 
+ interface IUser {
+   readonly userId:number,
+   email:string,
+   name:string,
+   getValue:()=> string,
+   
+   }
+   interface IUser {
+      address:number,
+   }
+
+   let User:IUser ={
+      userId:789,
+      email:"shahid@gmail.com",
+      name:"shahid",
+      getValue:() =>{
+         return "myString"
+      },
+      address:89
+   }
+    //inheritance in Interface with UserId using Literal
+   interface newInterface extends IUser{
+      userIs: "Admin" | "Teacher" | "Student"
+   }
+
+   let newStudent:newInterface={
+      userIs:"Admin",
+      userId:789,
+      email:"shahid@gmail.com",
+      name:"shahid",
+      getValue:() =>{
+         return "myString"
+      },
+      address:89
+       
+   }
+
+
+
  

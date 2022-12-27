@@ -118,7 +118,7 @@ type Use={
  let multiData:(number | string)[]=[];
  multiData.push(12,"khan");
 
- //user define constant type (only can put defined type for allotedcourses)
+ //literal constant type (only can put defined type for allotedcourses)
  let allotedCourse:"CS" | "SE" | "IT";
  allotedCourse="CS";
 
