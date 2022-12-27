@@ -43,4 +43,3 @@ class Facebook extends TakePhoto {
     }
 }
 const fbObject = new Facebook("OK", "OK", 7, "New camera");
-//Generics (malke components to Reuseable)

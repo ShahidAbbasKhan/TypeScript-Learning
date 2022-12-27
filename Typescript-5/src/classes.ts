@@ -60,6 +60,3 @@ class Facebook extends TakePhoto {
 
 
 
- //Generics (malke components to Reuseable)
-
- 
