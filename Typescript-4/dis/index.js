@@ -34,3 +34,23 @@ st3.dep;
 console.log(st3.course);
 // st3.Id; //error
 // st3.name //error
+//Getter and Setter 
+class enrolledCourse {
+    constructor() {
+        this.courseCount = 1;
+    }
+    get getEnrolledCourse() {
+        return `Your Enrolled Courses are ${this.courseCount}`;
+    }
+    set setEnrollCourse(EnterCourses) {
+        if (EnterCourses <= 1) {
+            throw new Error("Course Count should be 1 or greater");
+        }
+        this.courseCount = EnterCourses;
+    }
+    returnCount() {
+        return this.courseCount;
+    }
+}
+const course1 = new enrolledCourse();
+//course1.returnCount();    //'returnCount' is private and only accessible within class 'enrolledCourse'.
