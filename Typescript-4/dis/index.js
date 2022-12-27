@@ -54,3 +54,24 @@ class enrolledCourse {
 }
 const course1 = new enrolledCourse();
 //course1.returnCount();    //'returnCount' is private and only accessible within class 'enrolledCourse'.
+//protected
+class mainClass {
+    constructor() {
+        this.courseCount = 1;
+    }
+    get getEnrolledCourse() {
+        return `Your Enrolled Courses are ${this.courseCount}`;
+    }
+    set setEnrollCourse(EnterCourses) {
+        if (EnterCourses <= 1) {
+            throw new Error("Course Count should be 1 or greater");
+        }
+        this.courseCount = EnterCourses;
+    }
+}
+class subClass extends mainClass {
+    updatecourseCount() {
+        this.courseCount = 7;
+        return this.courseCount;
+    }
+}
