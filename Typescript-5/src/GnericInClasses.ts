@@ -59,4 +59,83 @@ function printStrings(str:null |string | string[]){
     }
     
 }
+//"in "keyword using with narrowing
+interface student{
+    name:string,
+    id:number,
+    isStudent:boolean
+}
+interface Admin{
+    name:string,
+    id:number,
+    isAdmin:boolean
+}
+function validation(check : Admin | student):boolean{
+    if("isAdmin" in check){
+        return check.isAdmin;
+    }
+    ("isStudent" in check);{
+        return check.isStudent;
+    }
+}
+
+//instance of using Narrowing
+let x= new Date();
+function getValue(x: Date | string) {
+  if (x instanceof Date) {
+    console.log(x.toUTCString());
+    
+  } else {
+    console.log(x.toUpperCase());
+    
+  }
+}
+getValue(x);
+
+//Discriminated unions using Narrowing
+
+interface circle{
+    kind:"circle",
+    radious:number
+}
+interface rectangle{
+    kind:"rectangle",
+    length:number,
+    width:number
+}
+interface square{
+    kind:"square",
+    side:number
+}
+type Shape= circle  | square | rectangle;
+
+function getShape(shape:Shape) {
+    if(shape.kind=="circle"){
+        return Math.PI * shape.radious ** 2;
+    }
+    else if(shape.kind=="square"){  
+        return shape.side * shape.side;
+    }
+    else{  
+        return shape.width * shape.length;
+    }
+  
+}
+//Exhaustiveness checking with never  (never type to represent a state which shouldn’t exist.)
+
+
+function getArea(shape:Shape) {
+    switch(shape.kind){
+        case "circle":
+            return Math.PI * shape.radious ** 2;
+            
+        case "rectangle":
+            return shape.width * shape.length;
+        case "square":
+            return shape.side * shape.side;
+        default:
+            const defalutVal:never=shape;
+            return defalutVal;
+    }
+}
 
