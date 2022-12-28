@@ -1,12 +1,12 @@
  //Generics (malke components to Reuseable)
  //accepeted value will be locked with Generic
 
- function setValue<Type>(val:Type):Type{
+ function setValue<Type,>(val:Type):Type{
     return val;
  }
  setValue(8);
 
- function setValues<S>(val:S):S{
+ function setValues<S,>(val:S):S{
     return val;
  }
  setValues("Hi Shahid");
@@ -23,3 +23,21 @@
 
 //Generics in Arrays and Arrow functions
 
+function returnValue<Type,>(Val:Type[]):Type{
+    return Val[5];
+}
+
+function putValue<Type,>(Val:Array<Type>):Type[]{
+    return Val;
+}
+
+function returnNumber<Type,>(Val:Array<Type>):Type{
+    const indexIs=7;
+    return Val[indexIs];
+}
+//in arrow functions
+
+const numberReturn= <Type,>(Val:Type[]): Type =>{
+    const indexIs=7;
+    return Val[indexIs];
+}
