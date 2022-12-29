@@ -24,6 +24,19 @@ console.log(newUser);
 newUser.unshift("Khan");
 console.log(newUser);
 
+//callback type function
+
+function myCallBack(text: string):void {
+   console.log("This is myCallback " + text);
+}
+
+function callingFunction(initialText: string, callback: (text: string) => void)
+{
+   callback(initialText);
+}
+
+callingFunction("myText", myCallBack);
+
 //enums  (return number type start from 0 index automatically)
 
   enum selectedSize {
