@@ -1,3 +1,4 @@
+# TypeScript-Learning:
 #### Start config file 
    tsc --init
 #### Make 2 folders
