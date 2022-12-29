@@ -11,6 +11,15 @@ let newType=123;
 newType=666;
 console.log(newType);
 
+//type Literal(in literal value and type will be same)
+
+const name="shahid";
+let Name="shahid";
+// name="shahid khan"; //error
+let fruits: "mangoes" | "apples" | "bananas";
+fruits= "mangoes";
+// fruits="oranges"; //error
+
 //any type (turn off the type checking)
 let anyType;
 function UnpredictedType(){
