@@ -7,6 +7,7 @@
    index.ts in src folder
 #### update tsconfig file 
    enable outDir file and give path for output "outDir": "./dis",
+   enable "strictNullChecks" mode in tsconfig.json tp prevent from null and undefined value
 #### Run command 
    tsc -w to watch all changes of typescript file, js file in dis folder
 #### path of js file 
