@@ -1,6 +1,6 @@
 # TypeScript-Learning:
-##Note:
- All values tyes in JavaScript are truthy except for those defined as falsy: false, 0, 0n, "", null, undefined, and NaN
+## Note:
+ (All values tyes in JavaScript are truthy except for those defined as falsy: false, 0, 0n, "", null, undefined, and NaN)
 #### Start config file 
    tsc --init
 #### Make 2 folders
