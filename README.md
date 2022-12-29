@@ -1,6 +1,7 @@
 # TypeScript-Learning:
 ## Note:
  (All values tyes in JavaScript are truthy except for those defined as falsy: false, 0, 0n, "", null, undefined, and NaN)
+ (& 'intersection' of number and string type will always be never type)
 #### Start config file 
    tsc --init
 #### Make 2 folders
