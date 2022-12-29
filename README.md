@@ -1,4 +1,7 @@
 # TypeScript-Learning:
+## Note:
+ (All values tyes in JavaScript are truthy except for those defined as falsy: false, 0, 0n, "", null, undefined, and NaN)
+ (& 'intersection' of number and string type will always be never type)
 #### Start config file 
    tsc --init
 #### Make 2 folders
@@ -6,7 +9,8 @@
 #### Make a file
    index.ts in src folder
 #### update tsconfig file 
-   enable outDir file and give path for output "outDir": "./dis",
+   enable outDir file and give path for output "outDir": "./dis";
+   enable "strictNullChecks":true mode in tsconfig.json tp prevent from null and undefined value
 #### Run command 
    tsc -w to watch all changes of typescript file, js file in dis folder
 #### path of js file 
