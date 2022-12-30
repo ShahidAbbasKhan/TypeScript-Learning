@@ -119,7 +119,7 @@ songBy("Atta", 5,"Song1", "Song2", "Song3");
 function addition(num1:number,num2:number):number{
     return num1+num2;
 }
-addition(3,8);
+addition(9,8);
 
 //Advance in Functions
 function getValue(bol:boolean):number | boolean{
